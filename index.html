@@ -1,0 +1,33 @@
+<html ng-app="my-app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Media Objects</title>
+    <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController as mc">
+    {{2+2}}
+    <ul class="list-group">
+        <li class="list-group-item media" ng-repeat="item in mc.mediaObj">
+            <div class="media-left">
+                <a href="#">
+                    <img ng-src="{{item.url}}" alt="none" />
+                </a>
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading">{{item.heading}}</h2>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat eius, repellendus. Quia accusantium assumenda reiciendis velit illum, quis quisquam voluptate quibusdam, dolorem explicabo voluptatem itaque. Aliquam, repellat inventore quidem cumque.
+            </div>
+        </li>
+    </ul>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
