@@ -11,8 +11,6 @@ h1
 
 .shadow{
     text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;  
-    /*opacity: 1.0;*/
-
 }
 
 li {
@@ -22,5 +20,15 @@ li {
 li:hover {
       opacity: 1;
       border: 2px solid black;
+      height: 180px;
+      
+}
+
+img{
+    height: 80px;
+}
+
+img:hover{
+    height: 160px;
 }
 
