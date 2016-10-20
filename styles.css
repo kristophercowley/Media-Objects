@@ -1,5 +1,17 @@
-h1 {
-    font-family: 'Times New Roman', Times, serif;
+body 
+{ 
+    background-image: url('images/internet.jpg');
+}
+h1
+{
+    /*font-family: 'Times New Roman', Times, serif;*/
+    color: whitesmoke;
     text-align: center;
-    text-shadow: gray 2px,2px;
+}
+.shadow{
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;  
+}
+li {
+    opacity: 0.7;
+
 }

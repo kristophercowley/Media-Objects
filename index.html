@@ -9,7 +9,7 @@
 
 <body ng-controller="MainController as mc">
     {{2+2}}
-    <h1>Items in my list</h1>
+    <h1 class="shadow">Items in my list</h1>
     <ul class="list-group">
         <li class="list-group-item media" ng-repeat="item in mc.mediaObj">
             <div class="media-left">
@@ -18,7 +18,7 @@
                 </a>
             </div>
             <div class="media-body">
-                <h2 class="media-heading">{{item.heading}}</h2>
+                <h2 class="media-heading shadow">{{item.heading}}</h2>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat eius, repellendus. Quia accusantium assumenda reiciendis velit illum, quis quisquam voluptate quibusdam, dolorem explicabo voluptatem itaque. Aliquam, repellat inventore quidem cumque.
             </div>
         </li>
