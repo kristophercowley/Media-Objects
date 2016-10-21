@@ -4,6 +4,17 @@
         .controller('MainController', function () {
             var mc = this;
             mc.test = "test";
+            mc.alert = function(){
+                alert('Working')
+            }
+            mc.addItem = function(newItem){
+                mc.mediaObj.push(newItem);
+                mc.newItem = "";
+            }
+             mc.removeItem = function(i){
+                mc.mediaObj.splice(i,1);
+                mc.newItem = "";
+            }
             mc.mediaObj = [
                 {
                     heading: "Media Item 1",

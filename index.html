@@ -10,16 +10,26 @@
 <body ng-controller="MainController as mc">
     Angular Working? 2 + 2 = {{2+2}}
     <h1 class="shadow">Items in my list</h1>
+    <div>
+        <!--{{mc.test}}-->
+        <button class="btn-primary" ng-click="mc.addItem(mc.newItem)">Add an item</button>
+        <input type="text" ng-model="mc.newItem.heading" placeholder="title">
+        <input type="text" ng-model="mc.newItem.url" placeholder="image url">
+        <!--<input type="text" ng-model="mc.newItem.link" placeholder="add link">-->
+
+    </div>
     <ul class="list-group">
-        <li class="list-group-item media" ng-repeat="item in mc.mediaObj">
+        <li class="list-group-item media" ng-repeat="item in mc.mediaObj track by $index">
             <div class="media-left">
                 <a href="{{item.link}}">
                     <img ng-src="{{item.url}}" alt="none" />
                 </a>
             </div>
             <div class="media-body">
-                <h2 class="media-heading shadow">{{item.heading}}</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat eius, repellendus. Quia accusantium assumenda reiciendis velit illum, quis quisquam voluptate quibusdam, dolorem explicabo voluptatem itaque. Aliquam, repellat inventore quidem cumque.
+                <h2 class="media-heading shadow">{{item.heading}} <button ng-click="mc.removeItem($index)" class="btn-danger">X</button></h2>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat eius, repellendus. Quia accusantium assumenda reiciendis
+                velit illum, quis quisquam voluptate quibusdam, dolorem explicabo voluptatem itaque. Aliquam, repellat inventore
+                quidem cumque.
             </div>
         </li>
     </ul>
